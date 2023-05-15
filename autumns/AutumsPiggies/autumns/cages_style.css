@@ -1,0 +1,220 @@
+body{
+    background-color:pink ;
+    background-image:url('pictures/halloweenbest.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
+    font-family:Goudy Old Style;
+    font-weight:bold;
+    margin:auto;
+
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-spacing:25px;
+    padding-top: 5%;
+}
+th{
+    font-size: 35px;
+    text-align: center;
+    color:white;
+}
+.card{
+    max-width: 1000px;
+    max-height: 1250px;
+    min-width: 500px;
+    min-height: 400px;
+    background-color:white;
+    border-radius: 10px;
+    outline: 1px solid rgba(225, 225, 225, .5);
+    outline-offset: -8px;
+    box-shadow: 3xp, 3px, 10pc rgba(0, 0, 0, .1);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.card-image{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    inset: 0;
+    object-fit: cover;
+    transition: transform .75s;
+    opacity: 1;
+    z-index: 0;
+}
+h2{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+    font-size:30px;
+    z-index:1;
+    color:black;
+    font-family:Goudy Old Style;
+    text-align: center;
+    
+}
+
+.card:hover .card-image{
+    transform:scale(1.15);
+    opacity: 0.2 ;
+    
+}
+h1{
+    text-align: left;
+    font-size: 75px;
+    font-family: italic;
+    font-family:Century Gothic;
+    padding-left: 200px;
+    padding-top:15px;
+    font-family:Goudy Old Style;
+    color:white;
+}
+th{
+    font-size: 50px;
+    padding:20px 0
+}
+table p{
+    color:black;
+    font-weight:bold;
+    font-size:20px;
+}
+.piggie-bottom-right img{
+    position:sticky;
+    bottom:0px;
+    right:0px;
+    max-height:200px;
+    max-width:400px;
+    min-width:none;
+    min-height: none;
+    float:right;
+}
+.piggie-bottom-left img{
+    position:sticky;
+    bottom:0px;
+    left:0px;
+    max-height:200px;
+    max-width:400px;
+    min-width:none;
+    min-height:none;
+    float:left;
+    
+}
+#preloader{
+    background: #FFA52B url(pictures/loader.gif) no-repeat center center;
+    height:100vh;
+    width:100%;
+    position:fixed;
+    z-index:100;
+    background-size:35%;
+  }
+  @media (max-width:600px) {
+    .wrap{
+      max-width:320px;
+      display:block;
+    }
+}
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style: none;
+}
+nav{
+    background:#e3833c;
+    height:80px;
+    width:100%;
+    position:fixed;
+    z-index:50;
+    left:-1%;
+}
+label.logo{
+    color:white;
+    font-size:35px;
+    line-height: 80px;
+    padding:0 100px;
+    font-weight: bold;
+    left:0;
+}
+nav,ul,li{
+    display:inline-block;
+    line-height: 80px;
+    margin:0 5px;
+}
+nav,ul,li,a{
+    color:white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding:7px 13px;
+    border-radius: 3px;
+}
+a:hover, a.active{
+    background: #F1202B;
+    transition:.5s;
+}
+nav ul{
+    float:right;
+    padding:0px 100px;
+}
+.checkbx{
+ font-size:30px;
+ color:white;
+ float:right;
+ line-height:80px;
+ margin-right:40px;
+ cursor:pointer;
+ display:none;
+}
+#check{
+    display:none;
+}
+@media(max-width:2500px){
+    label.logo{
+        font-size: 30px;
+        padding-left:50px;
+    }
+    nav,ul,li{
+        font-size:30px;
+    }
+}
+@media(max-width:2000px){
+    .checkbx{
+        display:block;
+    }
+    ul{
+        position:fixed;
+        width:100%;
+        height:100%;
+        background:#FFA52B;
+        top:80px;
+        left:-150%;
+        text-align:center;
+        transition: all .5s;
+        padding-top:20%;
+    }
+    nav,ul,li{
+        display:block;
+        margin:0;
+
+    }
+    nav,ul,li,a{
+        font-size: 20px;
+        z-index: 50;
+
+    }
+    a:hover, a.avtive{
+        background:none;
+        color:#F1202B;
+        line-height: 30px;
+    }
+    #check:checked~ul{
+        left:-5%;
+        background: url(https://images.unsplash.com/photo-1574376407492-c3cf78231def?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjczNTEwNDM&ixlib=rb-4.0.3&q=80);
+        background-size: cover;
+        font-size:50px;
+    }
+}
